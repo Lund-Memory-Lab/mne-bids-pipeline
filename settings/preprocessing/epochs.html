@@ -14,7 +14,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.3">
     
     
       
@@ -626,15 +626,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#config.tmin" class="md-nav__link">
-    tmin
+  <a href="#config.epochs_tmin" class="md-nav__link">
+    epochs_tmin
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#config.tmax" class="md-nav__link">
-    tmax
+  <a href="#config.epochs_tmax" class="md-nav__link">
+    epochs_tmax
   </a>
   
 </li>
@@ -979,15 +979,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#config.tmin" class="md-nav__link">
-    tmin
+  <a href="#config.epochs_tmin" class="md-nav__link">
+    epochs_tmin
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#config.tmax" class="md-nav__link">
-    tmax
+  <a href="#config.epochs_tmax" class="md-nav__link">
+    epochs_tmax
   </a>
   
 </li>
@@ -1065,32 +1065,32 @@ for more information.</p>
 </div>
 </div>
 <div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.tmin">
+<h2 class="doc doc-heading" id="config.epochs_tmin">
 
-<code class="highlight language-python"><span class="n">tmin</span><span class="p">:</span> <span class="nb">float</span></code>
+<code class="highlight language-python"><span class="n">epochs_tmin</span><span class="p">:</span> <span class="nb">float</span></code>
 
 
-      <a class="headerlink" href="#config.tmin" title="Permanent link">&para;</a></h2>
+      <a class="headerlink" href="#config.epochs_tmin" title="Permanent link">&para;</a></h2>
 <div class="doc doc-contents first">
 <p>The beginning of an epoch, relative to the respective event, in seconds.</p>
 <details class="example" open="open"><summary>Example</summary><div class="highlight">
-<pre><span></span><code><span class="n">tmin</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.2</span>  <span class="c1"># take 200ms before event onset.</span>
+<pre><span></span><code><span class="n">epochs_tmin</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.2</span>  <span class="c1"># 200 ms before event onset</span>
 </code></pre>
 </div>
 </details>
 </div>
 </div>
 <div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.tmax">
+<h2 class="doc doc-heading" id="config.epochs_tmax">
 
-<code class="highlight language-python"><span class="n">tmax</span><span class="p">:</span> <span class="nb">float</span></code>
+<code class="highlight language-python"><span class="n">epochs_tmax</span><span class="p">:</span> <span class="nb">float</span></code>
 
 
-      <a class="headerlink" href="#config.tmax" title="Permanent link">&para;</a></h2>
+      <a class="headerlink" href="#config.epochs_tmax" title="Permanent link">&para;</a></h2>
 <div class="doc doc-contents first">
 <p>The end of an epoch, relative to the respective event, in seconds.</p>
 <details class="example" open="open"><summary>Example</summary><div class="highlight">
-<pre><span></span><code><span class="n">tmax</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># take 500ms after event onset.</span>
+<pre><span></span><code><span class="n">epochs_tmax</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># 500 ms after event onset</span>
 </code></pre>
 </div>
 </details>
@@ -1099,15 +1099,15 @@ for more information.</p>
 <div class="doc doc-object doc-attribute">
 <h2 class="doc doc-heading" id="config.baseline">
 
-<code class="highlight language-python"><span class="n">baseline</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">tuple</span><span class="p">]</span></code>
+<code class="highlight language-python"><span class="n">baseline</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">NoneType</span><span class="p">],</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="n">NoneType</span><span class="p">]]]</span></code>
 
 
       <a class="headerlink" href="#config.baseline" title="Permanent link">&para;</a></h2>
 <div class="doc doc-contents first">
-<p>Specifies how to baseline-correct the epochs; if <code>None</code>, no baseline
-correction is applied.</p>
+<p>Specifies which time interval to use for baseline correction of epochs;
+if <code>None</code>, no baseline correction is applied.</p>
 <details class="example" open="open"><summary>Example</summary><div class="highlight">
-<pre><span></span><code><span class="n">baseline</span> <span class="o">=</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># baseline between tmin and 0</span>
+<pre><span></span><code><span class="n">baseline</span> <span class="o">=</span> <span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># beginning of epoch until time point zero</span>
 </code></pre>
 </div>
 </details>
@@ -1199,10 +1199,10 @@ correction is applied.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.f5903571.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.3981fc68.min.js"></script>
+      <script src="../../assets/javascripts/bundle.ca5457b8.min.js"></script>
       
     
   </body>
