@@ -40,6 +40,8 @@
     
     
     
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
       <link rel="stylesheet" href="../../css/extra.css">
     
     
@@ -977,32 +979,45 @@
                   <h1>Source space & forward solution</h1>
                 
                 <div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.spacing">
-
-<code class="highlight language-python"><span class="n">spacing</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="o">&amp;</span><span class="c1">#39;oct5&#39;, &#39;oct6&#39;, &#39;ico4&#39;, &#39;ico5&#39;, &#39;all&#39;], int]</span></code>
 
 
-      <a class="headerlink" href="#config.spacing" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>The spacing to use. Can be <code>'ico#'</code> for a recursively subdivided
+
+<h2 id="config.spacing" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">spacing</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;oct5&#39;</span><span class="p">,</span> <span class="s1">&#39;oct6&#39;</span><span class="p">,</span> <span class="s1">&#39;ico4&#39;</span><span class="p">,</span> <span class="s1">&#39;ico5&#39;</span><span class="p">,</span> <span class="s1">&#39;all&#39;</span><span class="p">],</span> <span class="nb">int</span><span class="p">]</span></code>
+
+
+<a href="#config.spacing" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>The spacing to use. Can be <code>'ico#'</code> for a recursively subdivided
 icosahedron, <code>'oct#'</code> for a recursively subdivided octahedron,
 <code>'all'</code> for all points, or an integer to use appoximate
 distance-based spacing (in mm). See (the respective MNE-Python documentation)
 [https://mne.tools/dev/overview/cookbook.html#setting-up-the-source-space]
 for more info.</p>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.mindist">
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.mindist" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">mindist</span><span class="p">:</span> <span class="nb">float</span></code>
 
 
-      <a class="headerlink" href="#config.mindist" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>Exclude points closer than this distance (mm) to the bounding surface.</p>
-</div>
-</div>
+<a href="#config.mindist" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>Exclude points closer than this distance (mm) to the bounding surface.</p>
+    </div>
+
+  </div>
                 
               
               

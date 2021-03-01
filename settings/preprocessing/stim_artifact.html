@@ -40,6 +40,8 @@
     
     
     
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
       <link rel="stylesheet" href="../../css/extra.css">
     
     
@@ -994,54 +996,71 @@
 stimulation, it is frequent to have a stimulation artifact. This option
 allows to fix it by linear interpolation early in the pipeline on the raw
 data.</p>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.fix_stim_artifact">
 
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.fix_stim_artifact" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">fix_stim_artifact</span><span class="p">:</span> <span class="nb">bool</span></code>
 
 
-      <a class="headerlink" href="#config.fix_stim_artifact" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>Apply interpolation to fix stimulation artifact.</p>
-<details class="example" open="open"><summary>Example</summary><div class="highlight">
-<pre><span></span><code><span class="n">fix_stim_artifact</span> <span class="o">=</span> <span class="kc">False</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.stim_artifact_tmin">
+<a href="#config.fix_stim_artifact" class="headerlink" title="Permanent link">&para;</a></h2>
 
+    <div class="doc doc-contents first">
+
+      <p>Apply interpolation to fix stimulation artifact.</p>
+<details class="example" open="open"><summary>Example</summary><div class="highlight"><pre><span></span><code><span class="n">fix_stim_artifact</span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div>
+</details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.stim_artifact_tmin" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">stim_artifact_tmin</span><span class="p">:</span> <span class="nb">float</span></code>
 
 
-      <a class="headerlink" href="#config.stim_artifact_tmin" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>Start time of the interpolation window in seconds.</p>
-<details class="example" open="open"><summary>Example</summary><div class="highlight">
-<pre><span></span><code><span class="n">stim_artifact_tmin</span> <span class="o">=</span> <span class="mf">0.</span>  <span class="c1"># on stim onset</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.stim_artifact_tmax">
+<a href="#config.stim_artifact_tmin" class="headerlink" title="Permanent link">&para;</a></h2>
 
+    <div class="doc doc-contents first">
+
+      <p>Start time of the interpolation window in seconds.</p>
+<details class="example" open="open"><summary>Example</summary><div class="highlight"><pre><span></span><code><span class="n">stim_artifact_tmin</span> <span class="o">=</span> <span class="mf">0.</span>  <span class="c1"># on stim onset</span>
+</code></pre></div>
+</details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.stim_artifact_tmax" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">stim_artifact_tmax</span><span class="p">:</span> <span class="nb">float</span></code>
 
 
-      <a class="headerlink" href="#config.stim_artifact_tmax" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>End time of the interpolation window in seconds.</p>
-<details class="example" open="open"><summary>Example</summary><div class="highlight">
-<pre><span></span><code><span class="n">stim_artifact_tmax</span> <span class="o">=</span> <span class="mf">0.01</span>  <span class="c1"># up to 10ms post-stimulation</span>
-</code></pre>
-</div>
+<a href="#config.stim_artifact_tmax" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>End time of the interpolation window in seconds.</p>
+<details class="example" open="open"><summary>Example</summary><div class="highlight"><pre><span></span><code><span class="n">stim_artifact_tmax</span> <span class="o">=</span> <span class="mf">0.01</span>  <span class="c1"># up to 10ms post-stimulation</span>
+</code></pre></div>
 </details>
-</div>
-</div>
+    </div>
+
+  </div>
                 
               
               

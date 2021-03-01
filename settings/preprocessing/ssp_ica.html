@@ -40,6 +40,8 @@
     
     
     
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
       <link rel="stylesheet" href="../../css/extra.css">
     
     
@@ -1075,47 +1077,75 @@
                   <h1>SSP & ICA</h1>
                 
                 <div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.use_ssp">
 
+
+
+<h2 id="config.use_ssp" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">use_ssp</span><span class="p">:</span> <span class="nb">bool</span></code>
 
 
-      <a class="headerlink" href="#config.use_ssp" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>Whether signal-space projection should be used or not.</p>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.use_ica">
+<a href="#config.use_ssp" class="headerlink" title="Permanent link">&para;</a></h2>
 
+    <div class="doc doc-contents first">
+
+      <p>Whether signal-space projection should be used or not.</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.use_ica" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">use_ica</span><span class="p">:</span> <span class="nb">bool</span></code>
 
 
-      <a class="headerlink" href="#config.use_ica" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>Whether independent component analysis should be used or not.</p>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.ica_algorithm">
+<a href="#config.use_ica" class="headerlink" title="Permanent link">&para;</a></h2>
 
-<code class="highlight language-python"><span class="n">ica_algorithm</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="o">&amp;</span><span class="c1">#39;picard&#39;, &#39;fastica&#39;, &#39;extended_infomax&#39;]</span></code>
+    <div class="doc doc-contents first">
+
+      <p>Whether independent component analysis should be used or not.</p>
+    </div>
+
+  </div>
 
 
-      <a class="headerlink" href="#config.ica_algorithm" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>The ICA algorithm to use.</p>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.ica_l_freq">
 
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.ica_algorithm" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">ica_algorithm</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;picard&#39;</span><span class="p">,</span> <span class="s1">&#39;fastica&#39;</span><span class="p">,</span> <span class="s1">&#39;extended_infomax&#39;</span><span class="p">]</span></code>
+
+
+<a href="#config.ica_algorithm" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>The ICA algorithm to use.</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.ica_l_freq" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">ica_l_freq</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span></code>
 
 
-      <a class="headerlink" href="#config.ica_l_freq" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>The cutoff frequency of the high-pass filter to apply before running ICA.
+<a href="#config.ica_l_freq" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>The cutoff frequency of the high-pass filter to apply before running ICA.
 Using a relatively high cutoff like 1 Hz will remove slow drifts from the
 data, yielding improved ICA results.</p>
 <p>Set to <code>None</code> to not apply an additional high-pass filter.</p>
@@ -1125,17 +1155,25 @@ data, yielding improved ICA results.</p>
   according to the <code>l_freq</code> and <code>h_freq</code> settings. After filtering, the
   data will be epoched, and the epochs will be submitted to ICA.</p>
 </div>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.ica_max_iterations">
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.ica_max_iterations" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">ica_max_iterations</span><span class="p">:</span> <span class="nb">int</span></code>
 
 
-      <a class="headerlink" href="#config.ica_max_iterations" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>Maximum number of iterations to decompose the data into independent
+<a href="#config.ica_max_iterations" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>Maximum number of iterations to decompose the data into independent
 components. A low number means to finish earlier, but the consequence is
 that the algorithm may not have finished converging. To ensure
 convergence, pick a high number here (e.g. 3000); yet the algorithm will
@@ -1144,17 +1182,25 @@ not necessarily exhaust the maximum number of iterations. Note that the
 default of 200 seems to be sufficient for Picard in many datasets, because
 it converges quicker than the other algorithms; but e.g. for FastICA, this
 limit may be too low to achieve convergence.</p>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.ica_n_components">
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.ica_n_components" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">ica_n_components</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span></code>
 
 
-      <a class="headerlink" href="#config.ica_n_components" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>MNE conducts ICA as a sort of a two-step procedure: First, a PCA is run
+<a href="#config.ica_n_components" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>MNE conducts ICA as a sort of a two-step procedure: First, a PCA is run
 on the data (trying to exclude zero-valued components in rank-deficient
 data); and in the second step, the principal componenets are passed
 to the actual ICA. You can select how many of the total principal
@@ -1170,46 +1216,71 @@ explained variance less than the value specified here will be passed to
 ICA.</p>
 <p>If <code>None</code>, <strong>all</strong> principal components will be used.</p>
 <p>This setting may drastically alter the time required to compute ICA.</p>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.ica_decim">
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.ica_decim" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">ica_decim</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span></code>
 
 
-      <a class="headerlink" href="#config.ica_decim" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>The decimation parameter to compute ICA. If 5 it means
+<a href="#config.ica_decim" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>The decimation parameter to compute ICA. If 5 it means
 that 1 every 5 sample is used by ICA solver. The higher the faster
 it is to run but the less data you have to compute a good ICA. Set to
 <code>1</code> or <code>None</code> to not perform any decimation.</p>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.ica_ctps_ecg_threshold">
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.ica_ctps_ecg_threshold" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">ica_ctps_ecg_threshold</span><span class="p">:</span> <span class="nb">float</span></code>
 
 
-      <a class="headerlink" href="#config.ica_ctps_ecg_threshold" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>The threshold parameter passed to <code>find_bads_ecg</code> method.</p>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.ica_eog_threshold">
+<a href="#config.ica_ctps_ecg_threshold" class="headerlink" title="Permanent link">&para;</a></h2>
 
+    <div class="doc doc-contents first">
+
+      <p>The threshold parameter passed to <code>find_bads_ecg</code> method.</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.ica_eog_threshold" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">ica_eog_threshold</span><span class="p">:</span> <span class="nb">float</span></code>
 
 
-      <a class="headerlink" href="#config.ica_eog_threshold" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>The threshold to use during automated EOG classification. Lower values mean
+<a href="#config.ica_eog_threshold" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>The threshold to use during automated EOG classification. Lower values mean
 that more ICs will be identified as EOG-related. If too low, the
 false-alarm rate increases dramatically.</p>
-</div>
-</div>
+    </div>
+
+  </div>
                 
               
               

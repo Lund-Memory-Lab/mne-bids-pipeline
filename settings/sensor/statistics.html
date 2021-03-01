@@ -40,6 +40,8 @@
     
     
     
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
       <link rel="stylesheet" href="../../css/extra.css">
     
     
@@ -1019,87 +1021,118 @@
                   <h1>Statistics</h1>
                 
                 <div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.contrasts">
 
+
+
+<h2 id="config.contrasts" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">contrasts</span><span class="p">:</span> <span class="n">Iterable</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span></code>
 
 
-      <a class="headerlink" href="#config.contrasts" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>The conditions to contrast via a subtraction of ERPs / ERFs. Each tuple
+<a href="#config.contrasts" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>The conditions to contrast via a subtraction of ERPs / ERFs. Each tuple
 in the list corresponds to one contrast. The condition names must be
 specified in <code>conditions</code> above. Pass an empty list to avoid calculation
 of contrasts.</p>
 <details class="example" open="open"><summary>Example</summary><p>Contrast the "left" and the "right" conditions by calculating
 <code>left - right</code> at every time point of the evoked responses:
-<div class="highlight">
-<pre><span></span><code><span class="n">conditions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'left'</span><span class="p">,</span> <span class="s1">'right'</span><span class="p">]</span>
-<span class="n">contrasts</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'left'</span><span class="p">,</span> <span class="s1">'right'</span><span class="p">)]</span>  <span class="c1"># Note we pass a tuple inside the list!</span>
-</code></pre>
-</div>
-</p>
+<div class="highlight"><pre><span></span><code><span class="n">conditions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">]</span>
+<span class="n">contrasts</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">)]</span>  <span class="c1"># Note we pass a tuple inside the list!</span>
+</code></pre></div></p>
 <p>Contrast the "left" and the "right" conditions within the "auditory" and
 the "visual" modality, and "auditory" vs "visual" regardless of side:
-<div class="highlight">
-<pre><span></span><code><span class="n">conditions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'auditory/left'</span><span class="p">,</span> <span class="s1">'auditory/right'</span><span class="p">,</span>
-              <span class="s1">'visual/left'</span><span class="p">,</span> <span class="s1">'visual/right'</span><span class="p">]</span>
-<span class="n">contrasts</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">'auditory/left'</span><span class="p">,</span> <span class="s1">'auditory/right'</span><span class="p">),</span>
-             <span class="p">(</span><span class="s1">'visual/left'</span><span class="p">,</span> <span class="s1">'visual/right'</span><span class="p">),</span>
-             <span class="p">(</span><span class="s1">'auditory'</span><span class="p">,</span> <span class="s1">'visual'</span><span class="p">)]</span>
-</code></pre>
-</div>
-</p>
+<div class="highlight"><pre><span></span><code><span class="n">conditions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;auditory/left&#39;</span><span class="p">,</span> <span class="s1">&#39;auditory/right&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;visual/left&#39;</span><span class="p">,</span> <span class="s1">&#39;visual/right&#39;</span><span class="p">]</span>
+<span class="n">contrasts</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;auditory/left&#39;</span><span class="p">,</span> <span class="s1">&#39;auditory/right&#39;</span><span class="p">),</span>
+             <span class="p">(</span><span class="s1">&#39;visual/left&#39;</span><span class="p">,</span> <span class="s1">&#39;visual/right&#39;</span><span class="p">),</span>
+             <span class="p">(</span><span class="s1">&#39;auditory&#39;</span><span class="p">,</span> <span class="s1">&#39;visual&#39;</span><span class="p">)]</span>
+</code></pre></div></p>
 </details>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.decode">
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.decode" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">decode</span><span class="p">:</span> <span class="nb">bool</span></code>
 
 
-      <a class="headerlink" href="#config.decode" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>Whether to perform decoding (MVPA) on the contrasts specified above as
-"contrasts". MVPA will be performed on the level of individual epochs.</p>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.decoding_metric">
+<a href="#config.decode" class="headerlink" title="Permanent link">&para;</a></h2>
 
+    <div class="doc doc-contents first">
+
+      <p>Whether to perform decoding (MVPA) on the contrasts specified above as
+"contrasts". MVPA will be performed on the level of individual epochs.</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.decoding_metric" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">decoding_metric</span><span class="p">:</span> <span class="nb">str</span></code>
 
 
-      <a class="headerlink" href="#config.decoding_metric" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>The metric to use for cross-validation. It can be <code>'roc_auc'</code> or <code>'accuracy'</code>
+<a href="#config.decoding_metric" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>The metric to use for cross-validation. It can be <code>'roc_auc'</code> or <code>'accuracy'</code>
 or any other metric supported by <code>scikit-learn</code>.</p>
 <p>With AUC, chance level is the same regardless of class balance.</p>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.decoding_n_splits">
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.decoding_n_splits" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">decoding_n_splits</span><span class="p">:</span> <span class="nb">int</span></code>
 
 
-      <a class="headerlink" href="#config.decoding_n_splits" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>The number of folds (a.k.a. splits) to use in the cross-validation.</p>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.n_boot">
+<a href="#config.decoding_n_splits" class="headerlink" title="Permanent link">&para;</a></h2>
 
+    <div class="doc doc-contents first">
+
+      <p>The number of folds (a.k.a. splits) to use in the cross-validation.</p>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.n_boot" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">n_boot</span><span class="p">:</span> <span class="nb">int</span></code>
 
 
-      <a class="headerlink" href="#config.n_boot" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>The number of bootstrap resamples when estimating the standard error and
+<a href="#config.n_boot" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>The number of bootstrap resamples when estimating the standard error and
 confidence interval of the mean decoding score.</p>
-</div>
-</div>
+    </div>
+
+  </div>
                 
               
               

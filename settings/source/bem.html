@@ -40,6 +40,8 @@
     
     
     
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
       <link rel="stylesheet" href="../../css/extra.css">
     
     
@@ -977,14 +979,18 @@
                   <h1>BEM surface</h1>
                 
                 <div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.bem_mri_images">
-
-<code class="highlight language-python"><span class="n">bem_mri_images</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="o">&amp;</span><span class="c1">#39;FLASH&#39;, &#39;T1&#39;, &#39;auto&#39;]</span></code>
 
 
-      <a class="headerlink" href="#config.bem_mri_images" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>Which types of MRI images to use when creating the BEM model.
+
+<h2 id="config.bem_mri_images" class="doc doc-heading">
+<code class="highlight language-python"><span class="n">bem_mri_images</span><span class="p">:</span> <span class="n">Literal</span><span class="p">[</span><span class="s1">&#39;FLASH&#39;</span><span class="p">,</span> <span class="s1">&#39;T1&#39;</span><span class="p">,</span> <span class="s1">&#39;auto&#39;</span><span class="p">]</span></code>
+
+
+<a href="#config.bem_mri_images" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>Which types of MRI images to use when creating the BEM model.
 If <code>'FLASH'</code>, use <abbr title="Fast low angle shot magnetic resonance imaging">FLASH MRI</abbr> images, and raise an exception if they cannot be
 found.</p>
 <details class="info" open="open"><summary>Advice</summary><p>It is recommended to use the FLASH images if available, as the quality
@@ -994,21 +1000,30 @@ of the extracted BEM surfaces will be higher.</p>
 <code>watershed</code> algorithm.</p>
 <p>If <code>'auto'</code>, use FLASH images if available, and use the <code>watershed</code>
 algorithm with the T1-weighted images otherwise.</p>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.recreate_bem">
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.recreate_bem" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">recreate_bem</span><span class="p">:</span> <span class="nb">bool</span></code>
 
 
-      <a class="headerlink" href="#config.recreate_bem" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>Whether to re-create the BEM surfaces, even if existing surfaces have been
+<a href="#config.recreate_bem" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>Whether to re-create the BEM surfaces, even if existing surfaces have been
 found. If <code>False</code>, the BEM surfaces are only created if they do not exist
 already. <code>True</code> forces their recreation, overwriting existing BEM surfaces.</p>
-</div>
-</div>
+    </div>
+
+  </div>
                 
               
               

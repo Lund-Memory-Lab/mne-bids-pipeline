@@ -40,6 +40,8 @@
     
     
     
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
       <link rel="stylesheet" href="../../css/extra.css">
     
     
@@ -984,46 +986,57 @@ are working with (pragmatics)
 If you are interested in typical analysis (up to 120 Hz) you can typically
 resample your data down to 500 Hz without preventing reliable time-frequency
 exploration of your data.</p>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.resample_sfreq">
 
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.resample_sfreq" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">resample_sfreq</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span></code>
 
 
-      <a class="headerlink" href="#config.resample_sfreq" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>Specifies at which sampling frequency the data should be resampled.
-If None then no resampling will be done.</p>
-<details class="example" open="open"><summary>Example</summary><div class="highlight">
-<pre><span></span><code><span class="n">resample_sfreq</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># no resampling</span>
-<span class="n">resample_sfreq</span> <span class="o">=</span> <span class="mi">500</span>  <span class="c1"># resample to 500Hz</span>
-</code></pre>
-</div>
-</details>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.decim">
+<a href="#config.resample_sfreq" class="headerlink" title="Permanent link">&para;</a></h2>
 
+    <div class="doc doc-contents first">
+
+      <p>Specifies at which sampling frequency the data should be resampled.
+If None then no resampling will be done.</p>
+<details class="example" open="open"><summary>Example</summary><div class="highlight"><pre><span></span><code><span class="n">resample_sfreq</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># no resampling</span>
+<span class="n">resample_sfreq</span> <span class="o">=</span> <span class="mi">500</span>  <span class="c1"># resample to 500Hz</span>
+</code></pre></div>
+</details>
+    </div>
+
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.decim" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">decim</span><span class="p">:</span> <span class="nb">int</span></code>
 
 
-      <a class="headerlink" href="#config.decim" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>Says how much to decimate data at the epochs level.
+<a href="#config.decim" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>Says how much to decimate data at the epochs level.
 It is typically an alternative to the <code>resample_sfreq</code> parameter that
 can be used for resampling raw data. <code>1</code> means no decimation.</p>
 <details class="info" open="open"><summary>Good Practice / Advice</summary><p>Decimation requires to lowpass filtered the data to avoid aliasing.
 Note that using decimation is much faster than resampling.</p>
 </details>
-<details class="example" open="open"><summary>Example</summary><div class="highlight">
-<pre><span></span><code><span class="n">decim</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># no decimation</span>
+<details class="example" open="open"><summary>Example</summary><div class="highlight"><pre><span></span><code><span class="n">decim</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># no decimation</span>
 <span class="n">decim</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># decimate by 4 ie devide sampling frequency by 4</span>
-</code></pre>
-</div>
+</code></pre></div>
 </details>
-</div>
-</div>
+    </div>
+
+  </div>
                 
               
               

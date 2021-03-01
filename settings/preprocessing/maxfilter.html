@@ -40,6 +40,8 @@
     
     
     
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
       <link rel="stylesheet" href="../../css/extra.css">
     
     
@@ -1005,14 +1007,18 @@
                   <h1>Maxwell filter</h1>
                 
                 <div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.use_maxwell_filter">
 
+
+
+<h2 id="config.use_maxwell_filter" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">use_maxwell_filter</span><span class="p">:</span> <span class="nb">bool</span></code>
 
 
-      <a class="headerlink" href="#config.use_maxwell_filter" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>Whether or not to use Maxwell filtering to preprocess the data.</p>
+<a href="#config.use_maxwell_filter" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>Whether or not to use Maxwell filtering to preprocess the data.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>If the data were recorded with internal active compensation (MaxShield),
@@ -1021,17 +1027,25 @@ Bad channels need to be set through BIDS channels.tsv and / or via the
 <code>find_flat_channels_meg</code> and <code>find_noisy_channels_meg</code> options above
 before applying Maxwell filter.</p>
 </div>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.mf_st_duration">
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.mf_st_duration" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">mf_st_duration</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span></code>
 
 
-      <a class="headerlink" href="#config.mf_st_duration" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>There are two kinds of maxfiltering: SSS (signal space separation) and tSSS
+<a href="#config.mf_st_duration" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>There are two kinds of maxfiltering: SSS (signal space separation) and tSSS
 (temporal signal space separation)
 (see <a href="http://cds.cern.ch/record/709081/files/0401166.pdf">Taulu et al., 2004</a>).</p>
 <p>If not None, apply spatiotemporal SSS (tSSS) with specified buffer
@@ -1049,44 +1063,56 @@ tSSS and set <code>mf_st_duration</code> to <code>None</code>.</p>
 default <code>mf_st_duration</code> to 10 s, meaning it acts like a 0.1 Hz
 high-pass filter.</p>
 </details>
-<details class="example" open="open"><summary>Example</summary><div class="highlight">
-<pre><span></span><code><span class="n">mf_st_duration</span> <span class="o">=</span> <span class="kc">None</span>
+<details class="example" open="open"><summary>Example</summary><div class="highlight"><pre><span></span><code><span class="n">mf_st_duration</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="n">mf_st_duration</span> <span class="o">=</span> <span class="mf">10.</span>  <span class="c1"># to apply tSSS with 0.1Hz highpass filter.</span>
-</code></pre>
-</div>
+</code></pre></div>
 </details>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.mf_head_origin">
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.mf_head_origin" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">mf_head_origin</span></code>
 
 
-      <a class="headerlink" href="#config.mf_head_origin" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p><code>mf_head_origin</code> : array-like, shape (3,) | 'auto'
+<a href="#config.mf_head_origin" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p><code>mf_head_origin</code> : array-like, shape (3,) | 'auto'
 Origin of internal and external multipolar moment space in meters.
 If 'auto', it will be estimated from headshape points.
 If automatic fitting fails (e.g., due to having too few digitization
 points), consider separately calling the fitting function with different
 options or specifying the origin manually.</p>
-<details class="example" open="open"><summary>Example</summary><div class="highlight">
-<pre><span></span><code><span class="n">mf_head_origin</span> <span class="o">=</span> <span class="s1">'auto'</span>
-</code></pre>
-</div>
+<details class="example" open="open"><summary>Example</summary><div class="highlight"><pre><span></span><code><span class="n">mf_head_origin</span> <span class="o">=</span> <span class="s1">&#39;auto&#39;</span>
+</code></pre></div>
 </details>
-</div>
-</div>
-<div class="doc doc-object doc-attribute">
-<h2 class="doc doc-heading" id="config.mf_reference_run">
+    </div>
 
+  </div>
+
+
+
+  <div class="doc doc-object doc-attribute">
+
+
+
+<h2 id="config.mf_reference_run" class="doc doc-heading">
 <code class="highlight language-python"><span class="n">mf_reference_run</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span></code>
 
 
-      <a class="headerlink" href="#config.mf_reference_run" title="Permanent link">&para;</a></h2>
-<div class="doc doc-contents first">
-<p>Despite all possible care to avoid movements in the MEG, the participant
+<a href="#config.mf_reference_run" class="headerlink" title="Permanent link">&para;</a></h2>
+
+    <div class="doc doc-contents first">
+
+      <p>Despite all possible care to avoid movements in the MEG, the participant
 will likely slowly drift down from the Dewar or slightly shift the head
 around in the course of the recording session. Hence, to take this into
 account, we are realigning all data to a single position. For this, you need
@@ -1094,13 +1120,12 @@ to define a reference run (typically the one in the middle of
 the recording session).</p>
 <p>Which run to take as the reference for adjusting the head position of all
 runs. If <code>None</code>, pick the first run.</p>
-<details class="example" open="open"><summary>Example</summary><div class="highlight">
-<pre><span></span><code><span class="n">mf_reference_run</span> <span class="o">=</span> <span class="s1">'01'</span>  <span class="c1"># Use run "01"</span>
-</code></pre>
-</div>
+<details class="example" open="open"><summary>Example</summary><div class="highlight"><pre><span></span><code><span class="n">mf_reference_run</span> <span class="o">=</span> <span class="s1">&#39;01&#39;</span>  <span class="c1"># Use run &quot;01&quot;</span>
+</code></pre></div>
 </details>
-</div>
-</div>
+    </div>
+
+  </div>
                 
               
               
